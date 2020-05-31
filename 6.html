@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>雪梨任务大作业</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    a{ text-decoration: none; }
+    li{  list-style: none; }
+    .clear:after{
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+    }
+    .header{
+      height: 100px;
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .zhong{
+      float: left;
+      width: 310px;
+      height: 40px;
+      margin-top: 30px;
+      margin-left: 20px;
+    }
+    .zhong .zone{
+      height: 40px;
+      margin-left: 40px;
+      float: left;
+      text-align: center;
+      line-height: 40px;
+    } 
+    .zhong .zone a{
+      font-size:18px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgba(5,5,5,1);
+    }
+    .zhong .zone a:hover{
+        border-width: 0 0 1.5px 0 ;
+        border-color: rgba(0, 164, 255, 1);
+        border-style: solid;
+        padding: 0 0 7px;
+      }
+    .form0{
+        float: left;
+        width: 410px;
+        height: 40px;
+        margin-left: 160px;
+        margin-top: 35px;
+    }
+    .left0{                               
+       float: left;
+       height: 20.5px;                    
+       font-size:14px;
+       color:rgba(191,191,191,1);
+       line-height:42px;
+       padding: 6.5px 136px 6px 9.5px;
+       border: 1px solid rgba(0,164,255,1);
+    }
+    .right0{
+      float: left;        
+      width:35px;
+      height:35px; 
+      border: 1px solid rgba(0,164,255,1);  
+      background:rgba(0,164,255,1) url(work/fa-search.png) no-repeat center;
+      background-size: 9.5px;
+    }
+    .xiaozi{
+      float: left;
+      width: 60px;
+      height:12px;
+      margin-top: 40px;
+      margin-right: 42px;
+      font-size:14px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgb(101,101,101);
+      }
+    .xiaozi a{ color:rgb(102,102,102); }
+    #beijing{
+      height: 420px;
+      width: 100%;
+      background-color:rgba(28,3,108,1);
+      height: 420px;
+    }
+    #beijing .center {
+      background: url('work/图层 144.png')no-repeat top center;
+      width: 1200px;
+      height: 420px;
+      margin: 0 auto;
+    }
+    #beijing .list{
+      width: 190px;
+      height: 420px;
+      margin-left: -30px;
+      background:rgba(0,0,0,0.3);
+    }
+    .list .hang{
+      height: 23px;
+      width: 100%;
+      line-height: 23px;
+      color: white;
+      float: left;
+      margin-top: 20px;
+    }
+    .list .hang .leftword{
+      float: left;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+    .list .hang .arrow{
+      float: right;
+      margin-top: 10px;
+      margin-right: 21px;
+    }
+    .list .hang:hover{
+      cursor: pointer;
+      color:rgba(0,180,255,1);
+    }
+    #body{
+      width: 100%;
+      height: 1520px;
+      background-color: #f3f5f7;
+      padding-top: 8px;
+    }
+    #body .nav0{
+      width: 1200px;
+      height: 60px;
+      margin: 0 auto;
+      background-color:white;
+      box-shadow:0px 2px 3px 0px rgba(118,118,118,0.2);
+    }
+    #body .nav0 .type{
+      width: 120px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      border-right: 1px #bfbfbf solid;
+      margin-top: 21px;
+      float: left;
+      font-size:16px;
+      font-family:Microsoft YaHei;
+      font-weight:bold;
+      color:#050505;
+    }
+    #body .nav0 .type:hover{
+      cursor: pointer;
+      color: #00A4FF;
+    }
+    #body .nav0 .expand{
+      width:60px;
+      height:18px;
+      line-height: 18px;
+      margin-top: 21px;
+      float: right;
+      font-size:14px;
+      margin-right: 60px;
+      font-family:Microsoft YaHei;
+      font-weight:bold;
+      color:rgba(0,164,255,1);
+    }
+    #body .header0{
+      width: 1200px;
+      height: 77px;
+      margin:  0  auto;
+    }
+    #body .header0 .type{
+      width: 80px;
+      height: 19px;
+      line-height: 19px;
+      font-size:20px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgba(73,73,73,1);
+      float: left;
+      margin-top: 35px;
+      margin-left: 5px;
+    }
+    
+    #body .header0 .expand{
+      width:48px;
+      height:13px;
+      font-size:12px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgba(165,165,165,1);
+      float: right;
+      margin-right: 20px;
+      margin-top: 35px;
+    }
+    #cont1 {
+      width: 1200px;
+      height: 580px;           
+      margin: 0 auto;
+    }
+    #cont2{
+      width: 1200px;
+      height: 288px;            
+      margin: 0 auto;
+    }
+    #body .hang1{
+      float: left;
+      width:228px;
+      height:270px; 
+      margin-bottom: 15px;
+      margin-left: 15px;
+      background-color: #FFFFFF;
+    }
+    #body .hang1:hover{
+      cursor: pointer;
+      box-shadow:0px 2px 5px 0px rgba(118,118,118,0.5);
+    }
+    #body .hang1 .img1{
+      width: 228px;
+      height: 155px;
+    }
+    #body .hang1 .word1{
+      width:185px;
+      height:34px;
+      font-size:14px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgba(5,5,5,1);
+      line-height:20px;
+      float: left;
+      margin-top: 24px;
+      margin-left: 23px;
+    }
+    #body .hang1 .word2{
+      width:119px;
+      height:13px;
+      font-size:12px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:#999999;
+      float: left;
+      margin-top: 18px ;
+      margin-left: 23px;
+    }
+    .nav1{
+      width: 1200px;
+      height: 80px;
+      margin:  0  auto;
+    }
+    .nav1 .first{
+      float: left;
+      width: 140px;
+      height: 20px;
+      line-height: 20px;
+      font-size:20px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgba(73,73,73,1);
+      margin-top: 35px;
+      margin-left: 2px;
+    }
+    .nav1 .second{
+      float: left;
+      text-align: center;
+      height:17px;
+      line-height: 17px;
+      margin-top: 41px;
+      margin-left: 291px;
+      font-size:16px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgba(0,163,255,1);
+    }
+    .nav1 .grade{
+      float: left;
+      width:100px;
+    }
+    .nav1 a{
+      color: #868686;
+    }
+    .nav1 a:hover{
+      color:#00A3FF;
+      cursor: pointer;
+    }
+    .nav1 .third{
+      float: right;
+      width:48px;
+      height:13px;
+      font-size:12px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgb(165,165,165);
+      margin-right: 20px;
+      margin-top: 35px;
+    }
+    #person{
+      width: 1200px;
+      height: 288px;
+      margin: 0 auto;
+    }
+    #person .img{
+      width: 470px;
+      height: 320px;
+      float: left;
+    }
+    #person .singal{
+      float: left;
+      width: 228px;
+      height: 320px;
+      margin-left: 15px;
+      position: relative;
+    }
+    #person .abo{
+      width: 228px;
+      height:122px;
+      background:rgba(0,0,0,0.5);
+      top:198px;
+      position: absolute;
+    }
+    #person .abo .name{
+      float: left;
+      height:18px;
+      font-size:18px;
+      font-family:Microsoft YaHei;
+      font-weight:bold;
+      color:rgb(255,255,255);
+      line-height:20px;
+      margin-top:21px ;
+      margin-left: 29px;
+    }
+    .fx{
+      display: inline;
+      font-size:12px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgb(255,255,255);
+    }
+    #final{
+      width: 1200px;
+      height: 400px;
+      padding-top: 124px;
+      margin: 0 auto;
+    }
+    #last{
+      width: 100%;
+      height: 155px;
+    }
+    #last .left1{
+      width: 375px;
+      height: 155px;
+      float: left;
+    }
+    #last .left1 .word3{
+      margin-top: 34px;
+      margin-bottom: 33px;
+      width:400px;
+      height:12px;
+      font-size:12px;
+      line-height:12px;
+      color:rgb(101,101,101);
+      font-family:SimSun;
+      font-weight:400;
+    }
+    #last .left1 .word4{
+      width: 120px;
+      height: 36px;
+      font-size:16px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      text-align: center;
+      color:rgba(0,164,255,1);
+      line-height:36px;
+      border: 2px solid #00A3FF;
+    }
+    #last .left1 .word4:hover{
+      cursor: pointer;
+    }
+    #last .right1{
+      float: left;
+      width: 97px;
+      height: 155px;
+      margin-left: 146px;
+    }
+    #last .right1 .word3{
+      width:100px;
+      height:17px;
+      font-size:16px;
+      font-family:Microsoft YaHei;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+      line-height:21px;
+      text-align: left;
+    }
+    #last .right1 .word4{
+      width: 100px;
+      height:96px;
+      margin-top: 13px;
+      font-size:12px;
+      font-family:SimSun;
+      font-weight:400;
+      line-height:21px;
+    }
+    #final #last .right1 .word4 a{
+      color:#333333;
+    }
+    #last a:hover{
+      cursor: pointer;
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="header clear">
+      <img src="work/雪梨在线.png" alt="雪梨logo" style="width:180px;height:42px; float:left;margin-top:30px;margin-left: 8px;">
+      <ul class="zhong clear">
+        <li class="zone"><a href="#">首页</a></li>
+        <li class="zone"><a href="#">课程</a></li>
+        <li class="zone"><a href="#">职业规划</a></li>
+      </ul>
+      <form class="form0 clear">
+        <input type="text" placeholder="输入关键词" class="left0" />
+        <input type="button" class="right0" />
+      </form>
+      <span class="xiaozi"><a href="#" >个人中心</a></span> 
+  </div>
+
+ <div id = "beijing">
+    <div class = "center">
+      <div class = "list clear">
+        <div class = "hang"><div class = "leftword">前端开发</div><div class = "arrow">></div></div>
+        <div class = "hang"><div class = "leftword">后端开发</div><div class = "arrow">></div></div>
+        <div class = "hang"><div class = "leftword">移动开发</div><div class = "arrow">></div></div>
+        <div class = "hang"><div class = "leftword">人工智能</div><div class = "arrow">></div></div>
+        <div class = "hang"><div class = "leftword">商业预测</div><div class = "arrow">></div></div>
+        <div class = "hang"><div class = "leftword">云计算&大数据</div><div class = "arrow">></div></div>
+        <div class = "hang"><div class = "leftword">运维&从测试</div><div class = "arrow">></div></div>
+        <div class = "hang"><div class = "leftword">UI设计</div><div class = "arrow">></div></div>
+        <div class = "hang"><div class = "leftword">产品</div><div class = "arrow">></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id = "body">
+
+    <div class = "nav0 clear">
+      <div class = "type" style="color:rgba(0,164,255,1.0);">精品推荐</div>
+      <div class = "type">JQuery</div>
+      <div class = "type">Spark</div>
+      <div class = "type">Mysql</div>
+      <div class = "type"> Javaweb</div>
+      <div class = "type">Mysql</div>
+      <div class = "type" style="border: none;">Javaweb</div>
+      <div class = "expand">修改兴趣</div>
+    </div>
+    <div class = "header0 clear">
+      <div class = "type">精品推荐</div>
+      <div class = "expand">查看全部</div>
+    </div>
+
+    <div id="cont1" class="clear">
+      <div class = "hang1 clear"  style="margin-left: 0;">
+        <div class = "img1"><img  src="work/图层 133.png" ></div>
+        <div class = "word1">Think PHP 5.0 博客系统实战项目演练</div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•&nbsp;1125人在学习</div>
+      </div>
+      <div class = "hang1 clear">
+        <div class = "img1"><img src="work/图层 135.png" ></div>
+        <div class = "word1">Android 网络图片加载框架详解</div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>
+      <div class = "hang1">
+        <div class = "img1"><img src="work/图层 136.png" ></div>
+        <div class = "word1">Angular 2 最新框架+主流技术+项目实战</div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>
+      <div class = "hang1">
+        <div class = "img1"><img src="work/图层 137.png" ></div>
+        <div class = "word1"> Android Hybrid APP开发实战 H5+原生！</div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>
+      <div class = "hang1">
+        <div class = "img1"><img src="work/图层 137.png" ></div>
+        <div class = "word1"> Android Hybrid APP开发实战 H5+原生！</div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>
+      <div class = "hang1"  style="margin-left: 0;">
+        <div class = "img1"><img src="work/图层 133.png" ></div>
+        <div class = "word1">Think PHP 5.0 博客系统实战项目演练</div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>
+      <div class = "hang1">
+        <div class = "img1"><img src="work/图层 135.png" ></div>
+        <div class = "word1">Android 网络图片加载框架详解</div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>
+      <div class = "hang1">
+        <div class = "img1"><img src="work/图层 136.png" ></div>
+        <div class = "word1">Angular 2 最新框架+主流技术+项目实战</div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>
+      <div class = "hang1">
+        <div class = "img1"><img src="work/图层 137.png" ></div>
+        <div class = "word1"> Android Hybrid APP开发实战 H5+原生！</div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>
+      <div class = "hang1">
+        <div class = "img1"><img src="work/图层 137.png" ></div>
+        <div class = "word1"> Android Hybrid APP开发实战 H5+原生！</div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>  
+    </div>
+
+    <div class = "nav1 clear">
+      <div class = "first">前端开发工程师</div>
+      <div class = "second">
+        <div class = "grade"><a href="#">热门</a></div>
+        <div class = "grade"><a href="#">初级</a> </div>
+        <div class = "grade"><a href="#">中级</a></div>
+        <div class = "grade"><a href="#">高级</a></div>
+      </div>
+      <div class = "third"><a href="#">查看全部</a></div>
+    </div>
+
+    <div id="cont2" class="clear">
+      <div class = "hang1"  style ="margin-left: 0;">
+        <div class = "img1"> <img  src="work/图层 142.png" ></div>
+        <div class = "word1">微软人工智能-数据分析平台 </div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>
+      <div class = "hang1">
+        <div class = "img1"><img src="work/rumen.png" ></div>
+        <div class = "word1"> Unity Profiler入门 </div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>  
+      <div class = "hang1">
+        <div class = "img1"><img src="work/图层 143.png" ></div>
+        <div class = "word1"> Cocos2d-x 引擎源码中的纹理优化 </div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div> 
+      <div class = "hang1">
+        <div class = "img1"><img src="work/图层 146.png" ></div>
+        <div class = "word1"> Kami2首页界面切换效果 </div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div> 
+      <div class = "hang1">
+        <div class = "img1"><img src="work/图层 145.png" ></div>
+        <div class = "word1"> Android Hybrid APP开发实战 H5+原生！ </div>
+        <div class = "word2"><div style = "color:rgba(255,124,45,1); display: inline;">高级&nbsp;&nbsp;</div>•  1125人在学习</div>
+      </div>
+    </div>
+
+    <div class="nav1 clear"><div class="first">牛人推荐</div> </div>
+    <div id = "person">
+      <div class="img"><img width = "470px"  height = "320px" src="work/biye.png" ></div>
+      <div class = "singal">
+        <img width="228px" height="320px" src="work/闻老师.png" >
+        <div class = "abo clear">
+          <div class = "name">闻老师&nbsp;&nbsp;&nbsp;&nbsp;<div class= "fx">大数据</div>
+          <div style="width:174px;height:54px;font-size:12px;line-height:20px;">高级互联网软件工程师，曾担任某物流公司CRM开发团队TL。多年JAVAEE、大数据领域研发……</div></div>
+        </div>
+      </div>
+      <div class = "singal">
+        <img width="228px" height="320px" src="work/汪老师.png" >
+        <div class = "abo clear">
+          <div class = "name">汪老师&nbsp;&nbsp;&nbsp;&nbsp;<div class= "fx">前端</div>
+          <div style="width:174px;height:54px;font-size:12px;line-height:20px;">
+          高级软件架构师，全栈开发，多年大型项目管理经验。对Web Components、Node.js…… </div></div>
+        </div>
+      </div>
+      <div class = "singal">
+        <img width="228px" height="320px" src="work/江老师.png" >
+        <div class = "abo clear">
+          <div class = "name"> 江老师&nbsp;&nbsp;&nbsp;&nbsp;<div class= "fx">前端</div>
+          <div style="width:174px;height:54px;font-size:12px;line-height:20px;">多年软件开发经验和教学经验，精通html，css，js,asp.net等编程语言和数据库系统……</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div id = "final">
+    <div id = "last" class = "clear">
+      <div class = "left1">
+        <div class = "pho"><img src="work/雪梨在线.png" style="width: 143px; height: 36px;"></div>
+        <div class = "word3"> 致力于普及中国最好的教育,与中国一流大学和机构合作提供在线课程。</div>
+        <div class = "word4"><a href="#" style="color:rgba(0,164,255,1);">下载APP</a></div>
+      </div>
+      <div class = "right1">
+        <div class = "word3">关于雪梨网</div>
+        <div class="word4">
+        <div ><a href="">关于</a></div>
+        <div ><a href="">管理团队</a></div>
+        <div ><a href="">工作机会</a></div>
+        <div ><a href="">客户服务</a></div>
+        <div ><a href="">帮助</a></div>
+        </div>
+      </div>
+      <div class = "right1"><div class = "word3">新手指南</div>
+        <div class="word4">
+        <div ><a href="">如何注册</a></div>
+        <div ><a href="">如何选课</a></div>
+        <div ><a href="">如何拿到毕业证</a></div>
+        <div ><a href="">学分是什么</a></div>
+        <div ><a href="">考试未通过怎么办</a></div>
+        </div>
+      </div>
+      <div class = "right1">
+        <div class = "word3">合作伙伴</div>
+        <div class="word4">
+        <div ><a href="">合作机构</a></div>
+        <div ><a href="">合作导师</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</body>
+</html>
+
+    
